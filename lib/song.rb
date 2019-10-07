@@ -22,11 +22,10 @@ class Song
     
     def self.genre_count
       @@genres.each { |genre|
-      if @@genres_count.key?(genre) == true
-      then
+      if @@genres_count[genre]
         @@genres_count[genre] += 1
       else
-        @@genres_count = {genre => 1}
+        @@genres_count[genre] = 1 
       end
       }
     @@genres_count
